@@ -15,7 +15,7 @@ if ( userAnswer === rightAnswer) {
     console.log('Correct!');
     totalResult += 1;
 } else {
-   console.log(`'${userAnswer}'${' is wrong answer ;(. Correct answer was '}'${rightAnswer}'\n${"Let's try again, "}${name}!`);
+   console.log(`'${userAnswer}'${' is wrong answer ;(. Correct answer was '}'${rightAnswer}'.\n${"Let's try again, "}${name}!`);
 return;
 }
 }
