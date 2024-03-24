@@ -8,7 +8,7 @@ const greeting = () => {
 export  {greeting};
 
 const randomizer = () => {
-    const currentNumber = Math.floor(Math.random() * 100);
+    const currentNumber = Math.floor(Math.random() * 1000);
     return currentNumber;
 };
 export {randomizer};
