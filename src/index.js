@@ -21,9 +21,10 @@ export {byeBye};
 const checkUserAnswer = (expressionValue, askingUser, rightAnswer) => { 
    const name = greeting();
     let roundQuantity = 0;
+    askingUser();
   while (roundQuantity !== 3) { 
   const expValue = expressionValue();
-  askingUser();
+ 
   const rightAns = rightAnswer(expValue);
   console.log(`${'Question: '}${expValue}`);
   const userAnswer = readlineSync.question('Your answer: ');
