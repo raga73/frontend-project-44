@@ -1,10 +1,11 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/raga73/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/raga73/frontend-project-44/actions)
 <<<<<<< HEAD
-https://asciinema.org/a/gr0XZ52IExnQ6PkyjeRIpsIPC
-https://asciinema.org/a/AJDBDhORUe4JpbVThwamCC9lG
-https://asciinema.org/a/L5XrlcIoRcHtyio3CAOFXgZ7B
-https://asciinema.org/a/d9PBavGpYJX2izVawI7Rq4mlZ
+https://asciinema.org/a/648676
+https://asciinema.org/a/648893
+https://asciinema.org/a/648902
+https://asciinema.org/a/648959
+https://asciinema.org/a/648961
 =======
 [![Maintainability](https://api.codeclimate.com/v1/badges/9e67348945c09e131684/maintainability)](https://codeclimate.com/github/raga73/frontend-project-44/maintainability)
 https://asciinema.org/a/gr0XZ52IExnQ6PkyjeRIpsIPC
