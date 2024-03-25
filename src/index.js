@@ -1,4 +1,4 @@
-import readlineSync, { question } from 'readline-sync';
+import readlineSync from 'readline-sync';
 const greeting = () => {
     console.log('Welcome to the Brain Games!');
     const name = readlineSync.question('May I have your name ? ');
@@ -8,7 +8,7 @@ const greeting = () => {
 export  {greeting};
 
 const randomizer = () => {
-    const currentNumber = Math.floor(Math.random() * 1000);
+    const currentNumber = Math.floor(Math.random() * 10);
     return currentNumber;
 };
 export {randomizer};

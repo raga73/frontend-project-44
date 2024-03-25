@@ -7,7 +7,9 @@ const askingUser = () => {
 
 const expressionValue = () => {
     const mathSigns = ['+', '-', '*'];
-    const signRandom = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+    const min = 0;
+    const max = 2;
+    const signRandom = Math.floor(Math.random() * (max - min + 1)) + min;
     const expValue = `${randomizer()} ${mathSigns.at(signRandom)} ${randomizer()}`
     return expValue;
 };
