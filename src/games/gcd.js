@@ -11,6 +11,7 @@ const expressionValue = () => {
 };
 
 const rightAnswer = (expValue) => {
+    let rightAns;
     let firstNumDividers = [];
     let secondNumDividers = [];
     let commonDividers = [];
