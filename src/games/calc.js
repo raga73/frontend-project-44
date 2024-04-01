@@ -29,6 +29,8 @@ const rightAnswer = (expValue) => {
     case mathSigns[2]:
       rightAns = firstNum * secondNum;
       break;
+    default:
+      break;
   }
   return rightAns.toString();
 };
