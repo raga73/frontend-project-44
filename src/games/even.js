@@ -11,8 +11,7 @@ const expressionValue = () => {
 };
 
 const rightAnswer = (expValue) => {
-  let rightAns;
-  expValue % 2 === 0 ? rightAns = 'yes' : rightAns = 'no';
+  const rightAns = expValue % 2 === 0 ? rightAns = 'yes' : rightAns = 'no';
   return rightAns;
 };
 
