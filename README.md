@@ -8,5 +8,4 @@ https://asciinema.org/a/648959
 https://asciinema.org/a/648961
 =======
 [![Maintainability](https://api.codeclimate.com/v1/badges/9e67348945c09e131684/maintainability)](https://codeclimate.com/github/raga73/frontend-project-44/maintainability)
-https://asciinema.org/a/gr0XZ52IExnQ6PkyjeRIpsIPC
->>>>>>> refs/remotes/origin/main
+
