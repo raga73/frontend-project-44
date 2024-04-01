@@ -1,4 +1,5 @@
-import { randomizer, checkUserAnswer } from '../index.js';
+import { checkUserAnswer } from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const askingUser = () => {
   console.log('What number is missing in the progression?');
@@ -7,12 +8,10 @@ const askingUser = () => {
 const expressionValue = () => {
   const progression = [];
   const min = 0;
-  const minLength = 5;
-  const maxLength = 10;
-  const progLength = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
-  const hiddenNumberIndex = Math.floor(Math.random() * ((progLength - 1) - min + 1)) + min;
-  const progressionStep = randomizer();
-  const progressionFirstNumber = randomizer();
+  const progLength = getRandomNumber(5, 10);
+  const hiddenNumberIndex = getRandomNumber(0, progLength - 1);
+  const progressionStep = getRandomNumber();
+  const progressionFirstNumber = getRandomNumber();
   progression[0] = progressionFirstNumber;
   for (let i = 1; i < progLength; i += 1) {
     progression[i] = progression[i - 1] + progressionStep;

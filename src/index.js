@@ -1,10 +1,5 @@
 import readlineSync from 'readline-sync';
 
-export const randomizer = () => {
-  const currentNumber = Math.floor(Math.random() * 10);
-  return currentNumber;
-};
-
 export const checkUserAnswer = (expressionValue, askingUser, rightAnswer) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name ? ');

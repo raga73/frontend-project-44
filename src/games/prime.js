@@ -1,11 +1,12 @@
-import { randomizer, checkUserAnswer } from '../index.js';
+import { checkUserAnswer } from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const askingUser = () => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 };
 
 const expressionValue = () => {
-  const expValue = `${randomizer()}`;
+  const expValue = `${getRandomNumber()}`;
   return expValue;
 };
 

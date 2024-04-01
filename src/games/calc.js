@@ -1,4 +1,5 @@
-import { randomizer, checkUserAnswer } from '../index.js';
+import { checkUserAnswer } from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const askingUser = () => {
   console.log('What is the result of the expression?');
@@ -6,28 +7,25 @@ const askingUser = () => {
 
 const expressionValue = () => {
   const mathSigns = ['+', '-', '*'];
-  const min = 0;
-  const max = mathSigns.length - 1;
-  const signRandom = Math.floor(Math.random() * (max - min + 1)) + min;
-  const expValue = `${randomizer()} ${mathSigns.at(signRandom)} ${randomizer()}`;
+  const signRandom = getRandomNumber(0, mathSigns.length - 1);
+  const expValue = `${getRandomNumber()} ${mathSigns.at(signRandom)} ${getRandomNumber()}`;
   return expValue;
 };
 
 const rightAnswer = (expValue) => {
   let rightAns;
   const mathSigns = ['+', '-', '*'];
-  const arr = expValue.split(' ');
-  const firstNum = Number(arr[0]);
-  const secondNum = Number(arr[2]);
-  switch (arr[1]) {
+  const mathExpression = expValue.split(' ');
+  const [firstNum, mathSign, secondNum] = mathExpression;
+  switch (mathSign) {
     case mathSigns[0]:
-      rightAns = firstNum + secondNum;
+      rightAns = Number(firstNum) + Number(secondNum);
       break;
     case mathSigns[1]:
-      rightAns = firstNum - secondNum;
+      rightAns = Number(firstNum) - Number(secondNum);
       break;
     case mathSigns[2]:
-      rightAns = firstNum * secondNum;
+      rightAns = Number(firstNum) * Number(secondNum);
       break;
     default:
       break;

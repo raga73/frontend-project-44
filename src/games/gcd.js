@@ -1,11 +1,12 @@
-import { randomizer, checkUserAnswer } from '../index.js';
+import { checkUserAnswer } from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const askingUser = () => {
   console.log('Find the greatest common divisor of given numbers.');
 };
 
 const expressionValue = () => {
-  const expValue = `${randomizer()} ${randomizer()}`;
+  const expValue = `${getRandomNumber()} ${getRandomNumber()}`;
   return expValue;
 };
 
