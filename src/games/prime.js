@@ -11,14 +11,13 @@ const expressionValue = () => {
 };
 
 const rightAnswer = (expValue) => {
-    let rightAns;
     let stack = [];
     for (let i = 1; i <= parseInt(expValue); i += 1) {
         if (parseInt(expValue) % i === 0) {
             stack.push(i);
         }
     }
-    stack.length === 2 ? rightAns = 'yes' : rightAns = 'no';
+    const rightAns = stack.length === 2 ? 'yes' : 'no';
     return rightAns;
   };
 
