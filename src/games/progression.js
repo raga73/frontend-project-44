@@ -1,13 +1,9 @@
-import { checkUserAnswer } from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import checkUserAnswer from '../index.js';
+import getRandomNumber from '../utils.js';
 
-const askingUser = () => {
-  console.log('What number is missing in the progression?');
-};
-
-const expressionValue = () => {
+const askUser = () => {
+  const mathRiddle = 'What number is missing in the progression?';
   const progression = [];
-  const min = 0;
   const progLength = getRandomNumber(5, 10);
   const hiddenNumberIndex = getRandomNumber(0, progLength - 1);
   const progressionStep = getRandomNumber();
@@ -18,7 +14,8 @@ const expressionValue = () => {
   }
   progression[hiddenNumberIndex] = '..';
   const expValue = progression.join(' ');
-  return expValue;
+  const result = [mathRiddle, expValue];
+  return result;
 };
 
 const rightAnswer = (expValue) => {
@@ -34,5 +31,5 @@ const rightAnswer = (expValue) => {
 };
 
 export default () => {
-  checkUserAnswer(expressionValue, askingUser, rightAnswer);
+  checkUserAnswer(askUser, rightAnswer);
 };

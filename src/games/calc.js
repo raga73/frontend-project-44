@@ -1,15 +1,13 @@
-import { checkUserAnswer } from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import checkUserAnswer from '../index.js';
+import getRandomNumber from '../utils.js';
 
-const askingUser = () => {
-  console.log('What is the result of the expression?');
-};
-
-const expressionValue = () => {
+const askUser = () => {
+  const mathRiddle = 'What is the result of the expression?';
   const mathSigns = ['+', '-', '*'];
   const signRandom = getRandomNumber(0, mathSigns.length - 1);
   const expValue = `${getRandomNumber()} ${mathSigns.at(signRandom)} ${getRandomNumber()}`;
-  return expValue;
+  const result = [mathRiddle, expValue];
+  return result;
 };
 
 const rightAnswer = (expValue) => {
@@ -34,5 +32,5 @@ const rightAnswer = (expValue) => {
 };
 
 export default () => {
-  checkUserAnswer(expressionValue, askingUser, rightAnswer);
+  checkUserAnswer(askUser, rightAnswer);
 };

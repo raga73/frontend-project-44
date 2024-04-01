@@ -1,13 +1,11 @@
-import { checkUserAnswer } from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import checkUserAnswer from '../index.js';
+import getRandomNumber from '../utils.js';
 
-const askingUser = () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-};
-
-const expressionValue = () => {
+const askUser = () => {
+  const mathRiddle = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const expValue = `${getRandomNumber()}`;
-  return expValue;
+  const result = [mathRiddle, expValue];
+  return result;
 };
 
 const rightAnswer = (expValue) => {
@@ -22,5 +20,5 @@ const rightAnswer = (expValue) => {
 };
 
 export default () => {
-  checkUserAnswer(expressionValue, askingUser, rightAnswer);
+  checkUserAnswer(askUser, rightAnswer);
 };

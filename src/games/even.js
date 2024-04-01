@@ -1,13 +1,11 @@
-import { checkUserAnswer } from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import checkUserAnswer from '../index.js';
+import getRandomNumber from '../utils.js';
 
-const askingUser = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-};
-
-const expressionValue = () => {
+const askUser = () => {
+  const mathRiddle = 'Answer "yes" if the number is even, otherwise answer "no".';
   const expValue = getRandomNumber();
-  return expValue;
+  const result = [mathRiddle, expValue];
+  return result;
 };
 
 const rightAnswer = (expValue) => {
@@ -16,5 +14,5 @@ const rightAnswer = (expValue) => {
 };
 
 export default () => {
-  checkUserAnswer(expressionValue, askingUser, rightAnswer);
+  checkUserAnswer(askUser, rightAnswer);
 };

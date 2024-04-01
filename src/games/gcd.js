@@ -1,13 +1,11 @@
-import { checkUserAnswer } from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import checkUserAnswer from '../index.js';
+import getRandomNumber from '../utils.js';
 
-const askingUser = () => {
-  console.log('Find the greatest common divisor of given numbers.');
-};
-
-const expressionValue = () => {
+const askUser = () => {
+  const mathRiddle = 'Find the greatest common divisor of given numbers.';
   const expValue = `${getRandomNumber()} ${getRandomNumber()}`;
-  return expValue;
+  const result = [mathRiddle, expValue];
+  return result;
 };
 
 const rightAnswer = (expValue) => {
@@ -26,5 +24,5 @@ const rightAnswer = (expValue) => {
 };
 
 export default () => {
-  checkUserAnswer(expressionValue, askingUser, rightAnswer);
+  checkUserAnswer(askUser, rightAnswer);
 };
