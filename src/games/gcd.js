@@ -10,24 +10,18 @@ const expressionValue = () => {
 };
 
 const rightAnswer = (expValue) => {
-  let maxDivider = 1;
+  let maxDivisor = 1;
   const arrayOfNumers = expValue.split(' ');
   const [firstNum, secondNum] = arrayOfNumers;
-  if (firstNum === 0 || secondNum === 0) {
-    return maxDivider.toString();
+  if (Number(firstNum) === 0 || Number(secondNum) === 0) {
+    return maxDivisor.toString();
   }
-  const commonDividers = [];
   for (let i = 1; i <= firstNum; i += 1) {
     if (firstNum % i === 0 && secondNum % i === 0) {
-      commonDividers.push(i);
+     maxDivisor = i;
     }
   }
-  for (const divider of commonDividers) {
-    if (divider > maxDivider) {
-      maxDivider = divider;
-    }
-  }
-  return maxDivider.toString();
+  return maxDivisor.toString();
 };
 
 export default () => {
