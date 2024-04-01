@@ -1,5 +1,4 @@
-import {randomizer} from "/home/raga/frontend-project-44/src/index.js";
-import {checkUserAnswer} from "/home/raga/frontend-project-44/src/index.js";
+import { randomizer, checkUserAnswer } from '../index.js';
 
 const askingUser = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -15,7 +14,6 @@ const rightAnswer = (expValue) => {
   return rightAns;
 };
 
-const checkEven = () => {
-checkUserAnswer(expressionValue, askingUser, rightAnswer);
+export default () => {
+  checkUserAnswer(expressionValue, askingUser, rightAnswer);
 };
-export {checkEven};

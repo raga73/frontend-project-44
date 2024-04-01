@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import { gcd }  from '/home/raga/frontend-project-44/src/games/gcd.js';
-gcd();
+import startGcdGame from '../src/games/gcd.js';
+
+startGcdGame();
