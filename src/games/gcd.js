@@ -14,7 +14,7 @@ const rightAnswer = (expValue) => {
   const arrayOfNumers = expValue.split(' ');
   const [firstNum, secondNum] = arrayOfNumers;
   if (Number(firstNum) === 0 || Number(secondNum) === 0) {
-    return maxDivisor.toString();
+    return (Number(firstNum) + Number(secondNum)).toString();
   }
   for (let i = 1; i <= firstNum; i += 1) {
     if (firstNum % i === 0 && secondNum % i === 0) {
