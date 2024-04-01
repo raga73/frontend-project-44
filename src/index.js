@@ -1,12 +1,11 @@
 import readlineSync from 'readline-sync';
 
-const randomizer = () => {
+export const randomizer = () => {
   const currentNumber = Math.floor(Math.random() * 10);
   return currentNumber;
 };
-export { randomizer };
 
-const checkUserAnswer = (expressionValue, askingUser, rightAnswer) => {
+export const checkUserAnswer = (expressionValue, askingUser, rightAnswer) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name ? ');
   console.log(`Hello, ${name}!`);
@@ -25,4 +24,3 @@ const checkUserAnswer = (expressionValue, askingUser, rightAnswer) => {
   }
   console.log(`${'Congratulations, '}${name}!`);
 };
-export { checkUserAnswer };
