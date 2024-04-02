@@ -4,7 +4,7 @@
 
 Welcome to the Brain-Games!
 [![asciicast](https://asciinema.org/a/648676.svg)](https://asciinema.org/a/648676)
-<a href="https://asciinema.org/a/648676" target="_blank"><img src="https://asciinema.org/a/648676.svg" /></a>
+Check Even Game Demo
 https://asciinema.org/a/648676
 https://asciinema.org/a/648893
 https://asciinema.org/a/648902
