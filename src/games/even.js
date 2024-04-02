@@ -6,7 +6,7 @@ export const mathRiddle = 'Answer "yes" if the number is even, otherwise answer 
 const askUser = () => {
   const mathExpression = getRandomNumber();
   return [mathExpression, checkEven(mathExpression)];
-  };
+};
 
 export default () => {
   checkUserAnswer(askUser, mathRiddle);
