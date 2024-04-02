@@ -7,9 +7,9 @@ export default (askUser, rightAnswer) => {
   const [mathRiddle] = askUser();
   console.log(mathRiddle);
   for (let i = 0; i < 3; i += 1) {
-    const [, expValue] = askUser();
-    const rightAns = rightAnswer(expValue);
-    console.log(`${'Question: '}${expValue}`);
+    const [, mathExpression] = askUser();
+    const rightAns = rightAnswer(mathExpression);
+    console.log(`${'Question: '}${mathExpression}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === rightAns) {
       console.log('Correct!');
