@@ -5,10 +5,7 @@ export const mathRiddle = 'Answer "yes" if given number is prime. Otherwise answ
 
 const askUser = () => {
   const number = getRandomNumber();
-  const mathExpression = `${number}`;
-  const rightAns = checkPrimeNumber(number);
-  const result = [mathExpression, rightAns];
-  return result;
+  return [`${number}`, checkPrimeNumber(number)];
 };
 
 export default () => {

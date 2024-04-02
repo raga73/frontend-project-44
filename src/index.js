@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
 
-export default (askUser, mathRiddle) => {
+export default (askUser, mathRiddle, roundsQuantity = 3) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name ? ');
   console.log(`Hello, ${name}!`);
   console.log(mathRiddle);
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 1; i <= roundsQuantity; i += 1) {
     const [mathExpression, rightAnswer] = askUser();
     console.log(`${'Question: '}${mathExpression}`);
     const userAnswer = readlineSync.question('Your answer: ');

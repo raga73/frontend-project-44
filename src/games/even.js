@@ -5,10 +5,8 @@ export const mathRiddle = 'Answer "yes" if the number is even, otherwise answer 
 
 const askUser = () => {
   const mathExpression = getRandomNumber();
-  const rightAns = checkEven(mathExpression);
-  const result = [mathExpression, rightAns];
-  return result;
-};
+  return [mathExpression, checkEven(mathExpression)];
+  };
 
 export default () => {
   checkUserAnswer(askUser, mathRiddle);

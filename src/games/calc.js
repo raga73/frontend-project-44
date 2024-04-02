@@ -8,10 +8,8 @@ const askUser = () => {
   const signRandom = mathSigns.at(getRandomNumber(0, mathSigns.length - 1));
   const firstNum = getRandomNumber();
   const secondNum = getRandomNumber();
-  const mathExpression = `${firstNum} ${signRandom} ${secondNum}`;
   const rightAns = calculation(firstNum, signRandom, secondNum);
-  const result = [mathExpression, rightAns];
-  return result;
+  return [`${firstNum} ${signRandom} ${secondNum}`, rightAns];
 };
 
 export default () => {

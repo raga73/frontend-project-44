@@ -12,9 +12,9 @@ export const getProgressionHiddenElement = (pr, hiddenNumberSymbol = '..') => {
   const hidNumInd = pr.indexOf(hiddenNumberSymbol);
   let rightAns;
   if (hidNumInd < (pr.length / 2)) {
-    rightAns = Number(pr[hidNumInd + 1]) - (Number(pr[hidNumInd + 2]) - Number(pr[hidNumInd + 1]));
+    rightAns = pr[hidNumInd + 1] - (pr[hidNumInd + 2] - pr[hidNumInd + 1]);
   } else {
-    rightAns = (Number(pr[hidNumInd - 1]) - Number(pr[hidNumInd - 2])) + Number(pr[hidNumInd - 1]);
+    rightAns = (pr[hidNumInd - 1] - pr[hidNumInd - 2]) + pr[hidNumInd - 1];
   }
   return rightAns;
 };
@@ -35,20 +35,20 @@ export const calculation = (firstNum, mathOperation, secondNum) => {
     default:
       break;
   }
-  return rightAns.toString();
+  return `${rightAns}`;
 };
 
 export const findGreatestCommonDivisor = (firstNum, secondNum) => {
   let maxDivisor = 1;
   if (firstNum === 0 || secondNum === 0) {
-    return (firstNum + secondNum).toString();
+    return `${firstNum + secondNum}`;
   }
   for (let i = 1; i <= firstNum; i += 1) {
     if (firstNum % i === 0 && secondNum % i === 0) {
       maxDivisor = i;
     }
   }
-  return maxDivisor.toString();
+  return `${maxDivisor}`;
 };
 
 export const checkPrimeNumber = (number) => {

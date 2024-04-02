@@ -14,10 +14,7 @@ const askUser = () => {
     pr[i] = pr[i - 1] + progressionStep;
   }
   pr[hidNumInd] = '..';
-  const mathExpression = pr.join(' ');
-  const rightAns = getProgressionHiddenElement(pr).toString();
-  const result = [mathExpression, rightAns];
-  return result;
+  return [pr.join(' '), `${getProgressionHiddenElement(pr)}`];
 };
 
 export default () => {
