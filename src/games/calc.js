@@ -1,5 +1,5 @@
 import checkUserAnswer from '../index.js';
-import{ getRandomNumber } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const askUser = () => {
   const mathRiddle = 'What is the result of the expression?';
