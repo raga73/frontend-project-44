@@ -1,5 +1,5 @@
 import checkUserAnswer from '../index.js';
-import getRandomNumber from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const askUser = () => {
   const mathRiddle = 'Find the greatest common divisor of given numbers.';
