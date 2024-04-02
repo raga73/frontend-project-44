@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/raga73/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/raga73/frontend-project-44/actions)",
+  "description": "set of 5 math games package",
   "main": "./bin/brain-games.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
