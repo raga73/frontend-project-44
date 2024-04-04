@@ -1,20 +1,30 @@
 import checkUserAnswer from '../index.js';
-import { getRandomNumber, getProgressionHiddenElement } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
-export const mathRiddle = 'What number is missing in the progression?';
+const mathRiddle = 'What number is missing in the progression?';
+
+const getProgressionHiddenElement = (progression, hiddenNumberSymbol = '..') => {
+  const hiddenNumberIndex = progression.indexOf(hiddenNumberSymbol);
+  if (hiddenNumberIndex < (progression.length / 2)) {
+    return progression[hiddenNumberIndex + 1]
+    - (progression[hiddenNumberIndex + 2] - progression[hiddenNumberIndex + 1]);
+  }
+  return (progression[hiddenNumberIndex - 1]
+      - progression[hiddenNumberIndex - 2]) + progression[hiddenNumberIndex - 1];
+};
 
 const askUser = () => {
-  const pr = [];
-  const prLength = getRandomNumber(5, 10);
-  const hidNumInd = getRandomNumber(0, prLength - 1);
+  const progression = [];
+  const progressionLength = getRandomNumber(5, 10);
+  const hiddenNumberIndex = getRandomNumber(0, progressionLength - 1);
   const progressionStep = getRandomNumber();
   const progressionFirstNumber = getRandomNumber();
-  pr[0] = progressionFirstNumber;
-  for (let i = 1; i < prLength; i += 1) {
-    pr[i] = pr[i - 1] + progressionStep;
+  progression[0] = progressionFirstNumber;
+  for (let i = 1; i < progressionLength; i += 1) {
+    progression[i] = progression[i - 1] + progressionStep;
   }
-  pr[hidNumInd] = '..';
-  return [pr.join(' '), `${getProgressionHiddenElement(pr)}`];
+  progression[hiddenNumberIndex] = '..';
+  return [progression.join(' '), getProgressionHiddenElement(progression)];
 };
 
 export default () => {
