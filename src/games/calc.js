@@ -1,8 +1,10 @@
 import checkUserAnswer from '../index.js';
 import getRandomNumber from '../utils.js';
 
+const mathSigns = ['+', '-', '*'];
+const mathRiddle = 'What is the result of the expression?';
+
 const calculation = (firstNumber, mathOperation, secondNumber) => {
-  const mathSigns = ['+', '-', '*'];
   switch (mathOperation) {
     case mathSigns[0]:
       return firstNumber + secondNumber;
@@ -15,10 +17,7 @@ const calculation = (firstNumber, mathOperation, secondNumber) => {
   }
 };
 
-const mathRiddle = 'What is the result of the expression?';
-
 const askUser = () => {
-  const mathSigns = ['+', '-', '*'];
   const signRandom = mathSigns.at(getRandomNumber(0, mathSigns.length - 1));
   const firstNumber = getRandomNumber();
   const secondNumber = getRandomNumber();
