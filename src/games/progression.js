@@ -17,15 +17,10 @@ const getProgression = (
 };
 
 const askUser = () => {
-  const [progression, progressionStep] = getProgression();
+  const [progression] = getProgression();
   const hiddenNumberIndex = getRandomNumber(0, progression.length - 1);
+  const rightAnswer = progression[hiddenNumberIndex];
   progression[hiddenNumberIndex] = '..';
-  let rightAnswer;
-  if (hiddenNumberIndex < (progression.length / 2)) {
-    rightAnswer = progression[hiddenNumberIndex + 1] - progressionStep;
-  } else {
-    rightAnswer = progression[hiddenNumberIndex - 1] + progressionStep;
-  }
   return [progression.join(' '), rightAnswer];
 };
 
